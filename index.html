@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memorisation Tool by Sinan</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- First screen: Text input and start button -->
+  <div id="firstScreen" class="container">
+    <div class="background"></div>
+    <div id="textInputSection" class="text-box-container">
+      <textarea id="textInput" placeholder="Paste your text here..." class="text-box"></textarea>
+      <button id="startButton">Start Memorising</button>
+    </div>
+  </div>
+
+  <!-- Memorisation screen -->
+  <div id="memorizationScreen" class="hidden">
+    <div class="background"></div>
+    <div class="container">
+      <h2>Level <span id="levelCounter">1</span></h2>
+      <div id="sentenceDisplay" class="sentence-display"></div>
+      <button id="harderButton">Harder</button>
+    </div>
+
+    <!-- Music settings -->
+    <div class="settings">
+      <label for="musicOption">Select Music:</label>
+      <select id="musicOption">
+        <option value="binaural">Binaural Beats</option>
+        <option value="advanced">Right ear Bible (Chinese), Left ear Mozart (2x speed)</option>
+      </select>
+      <button id="musicToggle">Play Music</button>
+    </div>
+  </div>
+
+  <!-- Congratulation screen -->
+  <div id="congratulationScreen" class="hidden">
+    <div class="background"></div>
+    <div class="container">
+      <h2>Congratulations! You completed the level.</h2>
+      <button id="nextLevelButton">Next Level</button>
+    </div>
+  </div>
+
+  <!-- Miscellaneous level screen -->
+  <div id="miscLevelScreen" class="hidden">
+    <div class="background"></div>
+    <div class="container">
+      <h2>Miscellaneous Level: Arrange the words in the correct sequence</h2>
+      <div id="wordArrangementArea"></div>
+      <button id="checkSequenceButton">Check Sequence</button>
+      <button id="retryButton" class="hidden">Retry</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
